@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Xml;
-using HotelBot.Models;
-using HotelBot.Utilities;
+using AgrevlisBankBot.Models;
+using AgrevlisBankBot.Utilities;
 
-namespace HotelBot.Translator
+namespace AgrevlisBankBot.Translator
 {
     public class Translator
     {

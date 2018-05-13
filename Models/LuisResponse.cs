@@ -1,4 +1,4 @@
-﻿namespace HotelBot.Models
+﻿namespace AgrevlisBankBot.Models
 {
     public class LuisResponse
     {

@@ -1,6 +1,6 @@
-﻿using HotelBot.Translator;
+﻿using AgrevlisBankBot.Translator;
 
-namespace HotelBot.Models
+namespace AgrevlisBankBot.Models
 {
     public static class GlobalVars
     {

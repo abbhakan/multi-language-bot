@@ -1,7 +1,7 @@
-﻿using HotelBot.Utilities;
+﻿using AgrevlisBankBot.Utilities;
 using Microsoft.Bot.Connector;
 
-namespace HotelBot.Translator
+namespace AgrevlisBankBot.Translator
 {
     public static class TranslationHandler
     {

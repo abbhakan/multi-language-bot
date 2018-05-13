@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace HotelBot.Extensions
+namespace AgrevlisBankBot.Extensions
 {
     public static class CollectionExtensions
     {

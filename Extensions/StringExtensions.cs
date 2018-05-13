@@ -1,8 +1,8 @@
-﻿using HotelBot.Translator;
-using HotelBot.Utilities;
+﻿using AgrevlisBankBot.Translator;
+using AgrevlisBankBot.Utilities;
 using Microsoft.Bot.Builder.Dialogs;
 
-namespace HotelBot.Extensions
+namespace AgrevlisBankBot.Extensions
 {
     public static class StringExtensions
     {

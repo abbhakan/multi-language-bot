@@ -7,15 +7,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Autofac;
-using HotelBot.Translator;
+using AgrevlisBankBot.Translator;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Connector;
-using HotelBot.Extensions;
-using HotelBot.Models;
-using HotelBot.Utilities;
+using AgrevlisBankBot.Extensions;
+using AgrevlisBankBot.Models;
+using AgrevlisBankBot.Utilities;
 
-namespace HotelBot.Controllers
+namespace AgrevlisBankBot.Controllers
 {
    [BotAuthentication]
     public class MessagesController : ApiController

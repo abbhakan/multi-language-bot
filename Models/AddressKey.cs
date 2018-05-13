@@ -1,6 +1,6 @@
 ﻿using Microsoft.Bot.Builder.Dialogs;
 
-namespace HotelBot.Models
+namespace AgrevlisBankBot.Models
 {
     public class AddressKey : IAddress
     {

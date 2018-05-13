@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace HotelBot.Utilities
+namespace AgrevlisBankBot.Utilities
 {
     public static class Settings
     {

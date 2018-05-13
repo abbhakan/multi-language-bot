@@ -12,7 +12,7 @@ using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Connector;
 
-namespace HotelBot
+namespace AgrevlisBankBot
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

@@ -2,9 +2,9 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using HotelBot.Utilities;
+using AgrevlisBankBot.Utilities;
 
-namespace HotelBot.Translator
+namespace AgrevlisBankBot.Translator
 {
     public class AzureAuthToken
     {

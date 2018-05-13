@@ -1,102 +1,58 @@
 ﻿using System;
 using System.Threading.Tasks;
-using HotelBot.Utilities;
+using AgrevlisBankBot.Utilities;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using System.Diagnostics;
-using HotelBot.Extensions;
+using AgrevlisBankBot.Extensions;
 
-namespace HotelBot
+namespace AgrevlisBankBot
 {
     [Serializable]
-    [LuisModel("744941fe-cabc-493b-9ee1-c2da9e8d5357", "4bc6e20c7a284c2b8b8e0d4afe22e24b")]
+    [LuisModel("b78816d7-69ef-4ffb-8a5c-4911070c6fce", "e60605d81fba4744b0a86e25a7c58421")]
     public class ChatDialog : LuisDialog<object>
     {
         [LuisIntent("")]
         public async Task None(IDialogContext context, LuisResult result)
         {
-            var response = ChatResponse.Default;
+            try
+            {
+                var response = ChatResponse.Default;
 
-            await context.PostAsync(response.ToUserLocale(context));
+                await context.PostAsync(response.ToUserLocale(context));
 
-            context.Wait(MessageReceived);
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         [LuisIntent("Greeting")]
         public async Task Greeting(IDialogContext context, LuisResult result)
         {
-            var response = ChatResponse.Greeting;
+            try
+            {
+                var response = ChatResponse.Greeting;
 
-            await context.PostAsync(response.ToUserLocale(context));
+                await context.PostAsync(response.ToUserLocale(context));
 
-            context.Wait(MessageReceived);
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         [LuisIntent("Farewell")]
         public async Task Farewell(IDialogContext context, LuisResult result)
         {
-            var response = ChatResponse.Farewell;
-
-            await context.PostAsync(response.ToUserLocale(context));
-
-            context.Wait(MessageReceived);
-        }
-
-        [LuisIntent("SwimmingPool")]
-        public async Task SwimmingPool(IDialogContext context, LuisResult result)
-        {
-            var response = ChatResponse.SwimmingPool;
-
-            await context.PostAsync(response.ToUserLocale(context));
-
-            context.Wait(MessageReceived);
-        }
-
-        [LuisIntent("Location")]
-        public async Task Location(IDialogContext context, LuisResult result)
-        {
-            var response = ChatResponse.Location;
-
-            await context.PostAsync(response.ToUserLocale(context));
-
-            context.Wait(MessageReceived);
-        }
-
-        [LuisIntent("Restaurant")]
-        public async Task Restaurant(IDialogContext context, LuisResult result)
-        {
-            var response = ChatResponse.Restaurant;
-
-            await context.PostAsync(response.ToUserLocale(context));
-
-            context.Wait(MessageReceived);
-        }
-
-
-        [LuisIntent("Wifi")]
-        public async Task Wifi(IDialogContext context, LuisResult result)
-        {
             try
             {
-                var response = ChatResponse.Wifi;
-
-               await context.PostAsync(response.ToUserLocale(context));
-
-               context.Wait(MessageReceived);  
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }           
-        }
-
-        [LuisIntent("Parking")]
-        public async Task Parking(IDialogContext context, LuisResult result)
-        {
-            try
-            {
-                var response = ChatResponse.Parking;
+                var response = ChatResponse.Farewell;
 
                 await context.PostAsync(response.ToUserLocale(context));
 
@@ -106,81 +62,150 @@ namespace HotelBot
             {
                 throw ex;
             }
-        }
+        }                                                                     
 
-        [LuisIntent("Transfer")]
-        public async Task Transfer(IDialogContext context, LuisResult result)
-        {
-            try
-            {
-                var response = ChatResponse.Transfer;
-
-                await context.PostAsync(response.ToUserLocale(context));
-
-                context.Wait(MessageReceived);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        [LuisIntent("ChangeReservation")]
-        public async Task ChangeReservation(IDialogContext context, LuisResult result)
-        {
-            try
-            {
-                var response = ChatResponse.ChangeReservation;
-
-                await context.PostAsync(response.ToUserLocale(context));
-
-                context.Wait(MessageReceived);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        [LuisIntent("CheckIn")]
-        public async Task Checkin(IDialogContext context, LuisResult result)
-        {
-            try
-            {
-                var response = ChatResponse.Checkin;
-
-                await context.PostAsync(response.ToUserLocale(context));
-
-                context.Wait(MessageReceived);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        [LuisIntent("Checkout")]
-        public async Task Checkout(IDialogContext context, LuisResult result)
-        {
-            try
-            {
-                var response = ChatResponse.Checkout;
-
-                await context.PostAsync(response.ToUserLocale(context));
-
-                context.Wait(MessageReceived);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
         [LuisIntent("Thanks")]
         public async Task Thanks(IDialogContext context, LuisResult result)
         {
             try
             {
                 var response = ChatResponse.Thanks;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("BankID")]
+        public async Task BankID(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.BankID;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("BID2031")]
+        public async Task BID2031(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.BID2031;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("BID1439")]
+        public async Task BID1439(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.BID1439;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("AddressChange")]
+        public async Task AddressChange(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.AddressChange;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("IBAN")]
+        public async Task IBAN(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.IBAN;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("OpenAccount")]
+        public async Task OpenAccount(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.OpenAccount;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("PINCode")]
+        public async Task PINCode(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.PINCode;
+
+                await context.PostAsync(response.ToUserLocale(context));
+
+                context.Wait(MessageReceived);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [LuisIntent("PersonalCode")]
+        public async Task PersonalCode(IDialogContext context, LuisResult result)
+        {
+            try
+            {
+                var response = ChatResponse.PersonalCode;
 
                 await context.PostAsync(response.ToUserLocale(context));
 
