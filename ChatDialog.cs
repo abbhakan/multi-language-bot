@@ -183,12 +183,12 @@ namespace AgrevlisBankBot
             }
         }
 
-        [LuisIntent("PINCode")]
-        public async Task PINCode(IDialogContext context, LuisResult result)
+        [LuisIntent("PinCode")]
+        public async Task PinCode(IDialogContext context, LuisResult result)
         {
             try
             {
-                var response = ChatResponse.PINCode;
+                var response = ChatResponse.PinCode;
 
                 await context.PostAsync(response.ToUserLocale(context));
 
